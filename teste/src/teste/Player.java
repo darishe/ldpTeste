@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Player {
   public String nome;
   public int playerID;
+  public int totalPlayers;
   
     Scanner scan = new Scanner(System.in); 
     
@@ -87,7 +88,9 @@ public void chat(){
                    
                    
                    if(msg.equals("startGame")){
-                        System.out.println("chegou aqui LOL, como !?");
+                       System.out.println("Chegou aqqui");
+                        totalPlayers = dis.readInt();
+                        
                     }
                
                 

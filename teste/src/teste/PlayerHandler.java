@@ -78,7 +78,15 @@ public class PlayerHandler  implements Runnable {
         // Um player individual faz "ready", e se de alguma maneira este consegui true, manda true para todos através deste método    
         public void startGame() throws IOException{
              for(PlayerHandler mc: Server.ar){
+                       System.out.println(Server.numPlayers + " estes é o numero que tento enviar.");
                         mc.dos.writeUTF("startGame");
+                         mc.dos.writeInt(Server.numPlayers);
+                         
+                         //mc.dos.writeObject();
+
+                         
+                         
+
              }
             
         }

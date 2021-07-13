@@ -63,6 +63,16 @@ public class Server {
      }
      
      
+     
+     // Faz o baralho, a unica razao pelo que está aqui, é porque todos os jogadores, precisam do mesmo baralho. 
+     public Baralho novoBaralho(){
+         Baralho baralho = new Baralho();
+         baralho.baralharCartas();
+         
+         return baralho;
+     }
+     
+     
      //Votação para começar o  - Tem de ser mais de um jogador a votar, e tem de ser mais de metade dos jogadores a dizer ready 
       public static boolean startGame(){
          if(startsVotacao > 1 && startsVotacao > (numPlayers / 2) )
